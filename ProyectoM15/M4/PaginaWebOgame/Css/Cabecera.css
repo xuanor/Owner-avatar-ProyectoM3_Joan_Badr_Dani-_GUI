@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+#cabecera{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+}

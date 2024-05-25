@@ -1,0 +1,252 @@
+body{
+    background: url(../fotos/Fondo/EspacioGif.gif);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0;
+  }
+
+
+  
+.sticky{
+    top: 0;
+    position: sticky;
+    z-index: 1000
+  }
+  
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); 
+
+/*Titulo*/
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#titulo h1 {
+    
+    margin-top: 40px; 
+    margin-bottom: 15px; 
+    padding: 1px;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    position: relative; 
+    top: 0; 
+    font-size: 4em;
+    z-index: 1; 
+    text-shadow: 0px 0px 10px rgb(54, 35, 161),
+                 0px 0px 40px rgb(6, 85, 85),
+                 0px 0px 80px purple,
+                 0px 0px 120px rgb(1, 31, 31),
+                 0px 0px 200px rgb(18, 97, 97);
+    
+}
+
+/*Video presentacion*/
+
+#video-container {
+    position: relative;
+    margin: 30px auto 0;
+    height: max-content;
+    width: min-content;
+  }
+  
+  #video-container:before,
+  #video-container:after { 
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: linear-gradient(45deg, #ff76c6, #00c3ff);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%;
+    z-index: -1;
+    animation: animate 20s linear infinite alternate both;
+    filter: blur(20px);
+
+  }
+  
+  @keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+#video-container iframe {
+    width: 55vw;
+    height: 30vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+/*Boton*/
+#cuerpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+#boton-download {
+    display: flex;
+    justify-content: center;
+    margin: 50px; 
+}
+
+#boton-download a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #fff; 
+    background-color: #000; 
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+#boton-download a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#boton-download a span {
+    position: absolute;
+}
+
+#boton-download a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+#boton-download a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+#boton-download a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+#boton-download a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+
+/* Adaptación a dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+    body{
+        background: url(../fotos/Fondo/EspacioGif2Movil.gif);
+        background-size: 200%;
+    }
+
+
+    /* Título */
+    #titulo h1 {
+        margin-top: 20px; 
+        margin-bottom: 10px; 
+        font-size: 2em; 
+    }
+        /* Video */
+    #video-container {
+        width: 90%; 
+        max-width: 90%; 
+        margin: 0 auto; 
+    }
+
+    #video-container iframe{
+        width: 100%;
+        height: 60vw;
+    }
+
+    /* Botón */
+    #boton-download {
+        margin-left: 23%;
+    }
+
+    #boton-download a {
+        margin-bottom: 20px; 
+    }
+}

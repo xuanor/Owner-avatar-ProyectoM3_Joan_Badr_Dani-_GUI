@@ -1,0 +1,260 @@
+body{
+    background: url(../fotos/Fondo/EspacioGif.gif);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0;
+}
+
+.sticky{
+    top: 0;
+    position: sticky;
+    z-index: 1000
+}
+
+/*Contnedor para los 3 divs */
+#contenedores{
+    background-color: white;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de sobresalir */
+    padding: 30px;
+    max-width: 90%;
+    margin: 0 auto 20px auto; 
+    text-align: center;   
+}
+#contenedor-videojuegos,#trabajadores,#contenedor-valores, .valor{
+  padding: 30px;
+  max-width: 90%;
+  margin: 0 auto 20px auto; 
+  text-align: center; 
+
+}
+#contenedores > div {
+  border-bottom: 1px solid black; /* Establece un borde inferior de 1 píxel sólido de color gris claro */
+  padding-bottom: 40px; /* Añade un espacio entre los contenedores */
+}
+
+
+.titulo {
+    margin-top: 40px; 
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+    text-transform: uppercase;
+    position: relative; 
+    top: 0; 
+    font-size: 50px;
+    z-index: 1; 
+}
+
+#eslogan{
+  color: aquamarine;
+  font-size: 50px;
+
+}
+
+
+/*Empresa*/
+#empresa {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  margin-top: 10px;
+  position: relative; /* Establece la posición relativa para el contenedor */
+}
+
+/* Estilo para el logotipo de la empresa */
+#empresa img {
+  max-width: 20%;
+  height: auto;
+  margin-right: 20px; 
+  border-radius: 10px;
+}
+
+#desc{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
+/* Estilo para el texto de la empresa */
+#desc p {
+  color: #666;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 70%;
+}
+
+#desc h1 {
+  color: #666;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/*Videojuegos*/
+#juegos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada juego */
+.juego {
+  flex: 1 1 30%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  position: relative; 
+}
+
+/* Estilo para la imagen */
+.juego img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer; 
+  transition: transform 0.3s; 
+}
+
+/* Estilo para la información del juego */
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 5px;
+  font-size: 1.2em;
+  color: #333;
+  border-radius: 0 0 10px 10px; 
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+/* Mostrar la información del juego al pasar el ratón sobre el juego */
+.juego:hover .info {
+  opacity: 1; 
+}
+
+
+
+
+/*Empleados*/
+
+
+
+/* Estilo para el título */
+.titulo {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos para el contenedor de los trabajadores */
+#trabajadores {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada trabajador */
+.trabajador {
+  flex: 1 1 30%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* Efecto hover para cada trabajador */
+.trabajador:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las imágenes de los trabajadores */
+.trabajador img {
+    border-radius: 20%; 
+    max-width: 45%; 
+    height: auto; 
+    display: block; 
+    margin-left: 10px; 
+}
+
+/* Estilo para el texto debajo de las imágenes */
+.trabajador p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #000000;
+  
+}
+
+
+/*Etica*/
+#valores {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada valor */
+.valor {
+  flex: 1 1 30%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s; 
+}
+
+/* Estilo para el título del valor */
+.valor h1 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el texto del valor */
+.valor p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Efecto de sombra al hacer hover */
+.valor:hover {
+  box-shadow: 0 0 10px black;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #empresa{
+    flex-direction: column;
+  }
+
+  #empresa img{
+    width: 50vw;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    margin-bottom: 5vw;
+  }
+ 
+  #desc h1{
+    text-align: center;
+  }
+
+  #desc p{
+    max-width: none;
+    text-align: center;
+  }
+}
+
