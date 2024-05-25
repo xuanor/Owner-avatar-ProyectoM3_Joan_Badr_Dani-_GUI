@@ -1,0 +1,107 @@
+body{
+    background: url(../fotos/Fondo/EspacioGif.gif);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0;
+}
+
+.sticky{
+    top: 0;
+    position: sticky;
+    z-index: 1000
+}
+
+/*Contnedor para los 3 divs */
+.contenedor {
+    background-color: white;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de sobresalir */
+    padding: 30px;
+    max-width: 90%;
+    margin: 0 auto 20px auto; 
+    text-align: center;
+}
+
+#videoJ{
+    background-color: white;
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 30px;
+    max-width: 50%;
+    margin: 0 auto 20px auto; 
+    text-align: center;  
+}
+
+#empresa img{
+    width: 35%; /* La imagen ocupa el 25% */
+    height: auto;
+    border-radius: 70%; /* Marco circular */
+}
+
+#videoJ img{
+    width: 30%; /* La imagen ocupa el 25% */
+    height: auto;
+    border-radius: 70%; /* Marco circular */
+
+
+}
+.trabajador img{
+    width: 25%; /* La imagen ocupa el 25% */
+    height: auto;
+    border-radius: 70%; /* Marco circular */
+    margin: 0 20px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionar */
+}
+
+
+.valores {
+        justify-content: space-between; /* Espacio entre elementos */
+        width: calc(30% - 20px); /* Ajustar el ancho para 5 productos por fila considerando el margen */
+        text-align: center;
+        display: inline-block;
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten a la siguiente fila si no caben */
+}
+
+
+
+.valores p {
+    font-size: 1.1em; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    color: #444; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Familia de fuentes */
+    margin: 10px; /* Espacio superior */
+}
+
+
+/*Trbaajadores*/
+
+.trabajador:nth-child(odd) {
+    flex-direction: row; /* Imagen a la izquierda */
+}
+
+.trabajador:nth-child(even) {
+    flex-direction: row-reverse; /* Imagen a la derecha */
+}
+
+.trabajador p {
+    width: 75%; /* El texto ocupa el 75% */
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
+.trabajador {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de sobresalir */
+    padding: 30px;
+    width: 100%; /* Asegura que cada trabajador ocupe el 100% del ancho del contenedor */
+    box-sizing: border-box;
+}
+
+
+.titulo{
+    align-items: center;
+    margin: 10px; /* Espacio superior */
+
+}
