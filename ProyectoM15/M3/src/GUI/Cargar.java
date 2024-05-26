@@ -14,6 +14,7 @@ public class Cargar extends JFrame implements ActionListener{
 	private JLabel label1, label2, label5;
 	private JButton newPlay, resume;
 	private Bienvenida bienvenida;
+	private boolean newUser = false;
 	
 	public Cargar(){
 		setLayout(null);
@@ -62,16 +63,32 @@ public class Cargar extends JFrame implements ActionListener{
 		if (e.getSource() == resume) {
 			bienvenida.setStartGame(true);
 			dispose();
-			JOptionPane.showMessageDialog(null,"WELCOME " + bienvenida.user);
+			JOptionPane.showMessageDialog(null,"WELCOME " + bienvenida.user.toUpperCase());
 		}
 		
-		if (e.getSource() == newPlay) {
-			//Limpio los datos a default
-			cdb.conection(4,null,null,null,null, false);
-			newPlay.setVisible(false);
-			resume.setBounds(150,280,160,30);
-			this.revalidate();
-		}
+//		if (isNewUser()) {
+//			if (e.getSource() == newPlay) {
+//				resume.doClick();
+//			}
+//		}else {
+			if (e.getSource() == newPlay) {
+				resume.doClick();
+				//Limpio los datos a default
+				cdb.conection(4,null,null,null,null, false);
+				newPlay.setVisible(false);
+				resume.setBounds(150,280,160,30);
+				this.revalidate();
+			}
+//		}
+	}
+
+	
+	public boolean isNewUser() {
+		return newUser;
+	}
+
+	public void setNewUser(boolean newUser) {
+		this.newUser = newUser;
 	}
 
 	public Bienvenida getBienvenida() {

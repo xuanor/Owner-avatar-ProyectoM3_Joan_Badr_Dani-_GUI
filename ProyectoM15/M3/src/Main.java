@@ -7,9 +7,20 @@ public class Main implements Variables{
 	private boolean attackComing = false;
 	private boolean attacked = false;
 	private boolean  start = false;
+	private Timer timer;
 	
 
-	
+	public void stopTimer() {
+		this.timer.cancel();
+	}
+	public Timer getTimer() {
+		return timer;
+	}
+
+	public void setTimer(Timer timer) {
+		this.timer = timer;
+	}
+
 	public boolean isStart() {
 		return start;
 	}
@@ -277,9 +288,9 @@ public class Main implements Variables{
 		
 		String datos = String.format("\nNEW THREAT COMING\n"
 				   + "\nLigth Hunter%12d\n"
-				   + "\nHeavy Hunter%12d\n"
-				   + "\nBattle Ship%13d\n"
-				   + "\nArmored Ship%12d\n"
+				   + "\nHeavy Hunter%10d\n"
+				   + "\nBattle Ship%14d\n"
+				   + "\nArmored Ship%10d\n"
 				   +"\n",
 				   enemyArray[0].size(), 
 				   enemyArray[1].size(),
@@ -299,7 +310,7 @@ public class Main implements Variables{
 		
 		// Set ejercitos en la battle
 		b.setPlanetArmy(mainPlanet.getArmy());
-		Timer timer = new Timer();
+		timer = new Timer();
 	    TimerTask taskThreat = new TimerTask() {
 	    
 

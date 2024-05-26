@@ -164,6 +164,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 			 	ventanaCarga.setLocationRelativeTo(null);
 			 	ventanaCarga.setCdb(cdb);
 			 	ventanaCarga.setBienvenida(this);
+			 	ventanaCarga.setNewUser(false);
 			 	
 				//setStartGame(true);
 			 	//dispose();
@@ -196,6 +197,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 			 	ventanaCarga.setLocationRelativeTo(null);
 			 	ventanaCarga.setCdb(cdb);
 			 	ventanaCarga.setBienvenida(this);
+			 	ventanaCarga.setNewUser(true);
 	   		}else {
 	   			JOptionPane.showMessageDialog(null, " ALGO HA IDO MAL");
 	   		}

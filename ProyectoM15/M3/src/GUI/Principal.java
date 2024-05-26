@@ -275,6 +275,8 @@ public class Principal extends JFrame implements ActionListener{
     	  public void windowClosing(WindowEvent e) {
 			// PUSH
 			cdb.conection(3, planet, battle, null, null, false);
+			// Apago el timer
+			back.stopTimer();
 			JOptionPane.showMessageDialog(null,"     Datos guardados");
 			
     			
@@ -330,12 +332,12 @@ public class Principal extends JFrame implements ActionListener{
        }
        // Vuelvo a la GUI Bienvenida
        if (e.getSource() == miSalir){
-
-    	   Bienvenida ventanabienvenida = new Bienvenida();
-    	   ventanabienvenida.setBounds(0,0,500,600);
-    	   ventanabienvenida.setVisible(true);
-    	   ventanabienvenida.setResizable(false);
-    	   ventanabienvenida.setLocationRelativeTo(null);
+    	  // Main principal2 = new Main(); ****
+//    	   Bienvenida ventanabienvenida = new Bienvenida();
+//    	   ventanabienvenida.setBounds(0,0,500,600);
+//    	   ventanabienvenida.setVisible(true);
+//    	   ventanabienvenida.setResizable(false);
+//    	   ventanabienvenida.setLocationRelativeTo(null);
     	   dispose();
     	   // PUSH
 			cdb.conection(3, planet, battle, null, null, false);
@@ -402,6 +404,7 @@ public class Principal extends JFrame implements ActionListener{
     	  comboBuild.setVisible(true);
     	  //datos.setText("");
     	  datos.setVisible(false);
+    	  enter.setText("ENTER");
     	  enter.setVisible(true);
     	  this.revalidate();
 	 	 
@@ -424,6 +427,7 @@ public class Principal extends JFrame implements ActionListener{
     	   comboTech.setVisible(true);
     	   datos.setText("");
     	   datos.setVisible(true);
+    	   enter.setText("ENTER");
     	   enter.setVisible(true);
     	   this.revalidate();
     	   	 
@@ -445,6 +449,7 @@ public class Principal extends JFrame implements ActionListener{
     	   labelReports.setVisible(true);
     	   datos.setText("");
      	   datos.setVisible(true);
+     	   enter.setText("ENTER");
      	   enter.setVisible(true);
      	   this.revalidate();
       	 

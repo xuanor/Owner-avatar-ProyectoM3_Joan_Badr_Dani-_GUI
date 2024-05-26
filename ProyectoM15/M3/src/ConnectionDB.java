@@ -213,6 +213,8 @@ public class ConnectionDB {
 				if (rs.getString(2).equals(usr) && rs.getString(3).equals(pswd)) {
 					//System.out.println("**************************************************");
 					setUser_id(rs.getInt(1));
+					setUserName(usr);
+					setPswr(pswd);
 					//System.out.println(getUser_id());
 					break;
 				}
@@ -374,7 +376,7 @@ public class ConnectionDB {
 			// Borrar anteriores tropas
 			ps = conn.prepareStatement(delete);
 			ps.executeUpdate();
-			
+			// ***
 			ps = conn.prepareStatement(update);
 			
 			for (String[] infoBatalla : b.getBattleStats()) {
@@ -570,8 +572,21 @@ public class ConnectionDB {
 				delete = "DELETE FROM armored_ship WHERE PLANET_ID = " + getUser_id();
 				stmnt.executeQuery(delete);
 				
-				delete = "DELETE FROM battle_ship WHERE PLANET_ID = " + getUser_id();
-				stmnt.executeQuery(delete);
+//				//Comprovacion de que tiene alguna batalla
+//				String query = "SELECT * FROM battle WHERE PLANET_ID = " + getUser_id();
+//				Statement stmnt2 = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//				ResultSet rs = stmnt2.executeQuery(query);
+//				int c=0;
+//				while(rs.next()) {
+//					c++;
+//				}
+//				
+//				if (c >0){
+//					delete = "DELETE FROM battle_ship WHERE PLANET_ID = " + getUser_id();
+//					stmnt.executeQuery(delete);
+//				}else {
+//					System.out.println("NO TIENE BATALLAS");
+//				}
 				
 				delete = "DELETE FROM heavy_hunter WHERE PLANET_ID = " + getUser_id();
 				stmnt.executeQuery(delete);
@@ -590,10 +605,10 @@ public class ConnectionDB {
 				stmnt.executeQuery(delete);
 			
 			
-				// USER CREDENTIALS
-				insert = "INSERT INTO user_credentials (user_id,user_password,user_name)"
-						+ "VALUES ( "+ getUser_id()+",'pepe', 'pepe')";
-				stmnt.executeQuery(insert);
+//				// USER CREDENTIALS
+//				insert = "INSERT INTO user_credentials (user_id,user_password,user_name)"
+//						+ "VALUES ( "+ getUser_id()+",'"+ getUserName()+ "', '" + getPswr()+ "')";
+//				stmnt.executeQuery(insert);
 				
 			}else if (setNewUsr) {
 				setUserName(usr);

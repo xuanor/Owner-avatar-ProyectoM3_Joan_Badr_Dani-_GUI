@@ -209,16 +209,16 @@ public class Battle implements Variables{
 		// Tropas inciales y sus bajas
 		informeStats += String.format("\n%-16s%12s%12s%26s%8s%12s\n"
 				   + "\n%-16s%12d%12d"
-				   + "%20s%14d%12d"
-				   + "\n%-16s%12d%12d"
-				   + "%20s%14d%12d"
-				   + "\n%-16s%12d%12d"
-				   + "%20s%14d%12d"
-				   + "\n%-16s%12d%12d"
-				   + "%20s%14d%12d"
-				   + "\n%-16s%12d%12d"
-				   + "\n%-16s%12d%12d"
-				   + "\n%-16s%12d%12d"
+				   + "%27s%15d%15d"
+				   + "\n%-14s%12d%12d"
+				   + "%27s%13d%13d"
+				   + "\n%-16s%13d%13d"
+				   + "%27s%17d%15d"
+				   + "\n%-14s%12d%12d"
+				   + "%27s%14d%14d"
+				   + "\n%-16s%10d%11d"
+				   + "\n%-17s%12d%12d"
+				   + "\n%-16s%10d%10d"
 				   +"\n",
 				   "Army Planet","Units","Drops","Initial Army Enemy", "Units", "Drops",
 				   "Ligth Hunter",getInitialArmies()[0][0], getPlanetDrops()[0],
