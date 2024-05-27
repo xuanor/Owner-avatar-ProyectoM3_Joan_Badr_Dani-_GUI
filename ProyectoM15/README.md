@@ -9,4 +9,6 @@ Necesitarás un servidor de BBDD SQL en local para ejecutar el script de creaci�
 Ejecuta el código del fichero Main.java de la carpeta M3 para jugar al juego del espacio. 
 Ejecuta el código del fichero ogamePrincipal.html para ver la página web.
 
+P.D: Añadir los dos gifs a la carpeta fotos/fondo.
+
 Desarrollado por Joan, Daniel y  Badr.
